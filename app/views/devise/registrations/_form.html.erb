@@ -1,0 +1,233 @@
+<%= semantic_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {novalidate: true}) do |f| %>
+  <fieldset>
+    <legend class="invisible">
+      <span>Completar perfil</span>
+    </legend>
+
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:first_name) %>
+        <%= field_notice_box %>
+      <% end %>
+      <%= f.input :first_name, required: true, input_html: {autofocus: true, required: true, class: 'input-xl'} %>
+    </div><%#--.inputlabel-box--%>
+
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:last_name) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :last_name, required: true, input_html: {required: true, class: 'input-xl'} %>
+    </div><%#--.inputlabel-box--%>
+
+    <% if action == "new" %>
+      <div class="inputlabel-box">
+        <% if resource.errors.include?(:document_type) %>
+            <%= field_notice_box %>
+        <% end %>
+        <%= f.input :document_type,
+                    required: true,
+                    as: :select,
+                    collection: User::DOCUMENTS_TYPE,
+                    input_html: {required: true, class: 'js-registration-document'} %>
+      </div>
+
+      <div class="inputlabel-box">
+        <% if resource.errors.include?(:document_vatid) %>
+            <%= field_notice_box %>
+        <% end %>
+        <%= f.input :document_vatid, required: true, input_html: {required: true, class: 'input-s'} %>
+
+        <p class="js-registration-document-dni text-m invisible">
+          <%= t('podemos.registration.message.dni') %>
+        </p>
+
+        <p class="js-registration-document-nie text-m invisible">
+          <%= t('podemos.registration.message.nie') %>
+        </p>
+
+        <p class="js-registration-document-passport text-m invisible">
+          <%= t('podemos.registration.message.passport') %>
+        </p>
+      </div>
+    <% end %>
+
+    <% if action == "edit" %>
+      <div class="inputlabel-box inputlabel-box-hint">
+        <%= f.input :document_type,
+                    required: true,
+                    as: :select,
+                    hint: t("devise.hints.locked"),
+                    collection: User::DOCUMENTS_TYPE,
+                    input_html: {required: true, disabled: true, class: 'js-registration-document'} %>
+      </div>
+
+      <div class="inputlabel-box inputlabel-box-hint">
+        <%= f.input :document_vatid, required: true, hint: t("devise.hints.locked"), input_html: {disabled: true, required: true, class: 'input-s'} %>
+      </div>
+    <% end %>
+
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:born_at) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :born_at,
+                  required: true,
+                  input_html: { required: true, class: 'input-s' },
+                  start_year: 1999,
+                  end_year: 1900 %>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend><span>Domicilio</span></legend>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:country) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= label :user, :country, class: "control-label", required: :required do %>
+        País
+        <abbr title="requerido">*</abbr>
+      <% end %>
+      <%= select_tag "user[country]", options_from_collection_for_select(get_countries, "code", "name", @user_location[:country]), { disabled: false, required: true, data: {allowClear: true} } %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:province) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= render partial: 'subregion_select', locals:{country: @user_location[:country], province: @user_location[:province], disabled: false, required: true, field: :province, title:"Provincia", options_filter: (resource.can_change_vote_location? ? User.blocked_provinces : nil ) } %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:town) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= render partial: 'municipies_select', locals:{country: @user_location[:country], province: @user_location[:province], town: @user_location[:town], disabled: false, required: true, field: :town, title:"Municipio"}%>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:postal_code) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :postal_code, required: true, input_html: {required: true, class: 'input-s'} %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:address) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :address, required: true, input_html: {required: true, class: 'input-xl'} %>
+    </div>
+  </fieldset>
+
+  <fieldset id="vote_town_section">
+    <legend><span>Lugar de participación</span></legend>
+    <div class="inputlabel-box">
+      <%= render partial: 'subregion_select', locals:{country: "ES", province: @user_location[:vote_province], disabled: !resource.can_change_vote_location?, required: false, field: :vote_province, title:"Provincia de participación", options_filter: User.blocked_provinces } %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:vote_town) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= render partial: 'municipies_select', locals:{country: "ES", province: @user_location[:vote_province], town: @user_location[:vote_town], disabled: !resource.can_change_vote_location?, required: false, field: :vote_town, title:"Municipio de participación"}%>
+    </div>
+  </fieldset>
+
+  <fieldset>
+
+    <% if action == "new" %>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:email) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :email, as: :email, required: true, input_html: {required: true, class: 'input-m'} %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:email_confirmation) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :email_confirmation, as: :email, required: true, input_html: {required: true, class: 'input-m'} %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:password) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :password, required: true, input_html: {required: true, class: 'input-m'} %>
+    </div>
+    <div class="inputlabel-box">
+      <% if resource.errors.include?(:password_confirmation) %>
+          <%= field_notice_box %>
+      <% end %>
+      <%= f.input :password_confirmation, required: true, input_html: {required: true, class: 'input-m'} %>
+    </div>
+    <% end %>
+    <!-- div class="inputlabel-box">
+      <% if resource.errors.include?(:wants_newsletter) %>
+          <%= field_notice_box %>
+      <% end %>
+      <div class="input-box">
+        <%= f.label :wants_newsletter %>
+        <%= f.check_box :wants_newsletter, checked: true, class: 'checkbox' %>
+        <p class="text-xl">Desmarca esta casilla si no quieres recibir nuestra newsletter. Sólo enviamos información importante</p>
+      </div>
+    </div -->
+
+    <% if action == "new" %>
+
+      </fieldset>
+
+      <fieldset class="with-tos">
+
+        <legend><span>Consentimiento</span></legend>
+        <div class="inputlabel-box">
+          <span class="no-label">
+            Condiciones generales de inscripción y política de privacidad.
+          </span>
+          <span class="no-input">
+            <div class="tos">
+              <%= t('podemos.registration.terms_of_service.p1_html')%>
+            </div>
+          </span>
+        </div>
+
+        <div class="inputlabel-box">
+          <% if resource.errors.include?(:terms_of_service) %>
+              <%= field_notice_box %>
+          <% end %>
+          <%= f.label :terms_of_service %>
+          <div class="input-box">
+            <%= f.check_box :terms_of_service, class: 'checkbox' %>
+            <p class="text-xl">Acepto las condiciones generales.</p>
+          </div>
+        </div>
+
+        <div class="inputlabel-box">
+          <% if resource.errors.include?(:over_18) %>
+              <%= field_notice_box %>
+          <% end %>
+          <%= f.label :over_18 %>
+          <div class="input-box">
+            <%= f.check_box :over_18, class: 'checkbox' %>
+            <p class="text-xl">Declaro ser mayor de 18 años</p>
+          </div>
+        </div>
+
+        <div class="inputlabel-box">
+          <%= f.label :captcha %>
+          <div class="input-box">
+            <%= recaptcha_tags %>
+          </div>
+        </div>
+
+        <%= f.actions class: 'enter' do %>
+            <%= f.action :submit, label: t("devise.buttons.sign_up"), button_html: {class: "button"} %>
+        <% end %>
+    <% end %> <%# if action == "new" %>
+
+    <% if action == "edit" %>
+        <div class="inputlabel-box">
+          <% if resource.errors.include?(:current_password) %>
+              <%= field_notice_box %>
+          <% end %>
+          <%= f.input :current_password, hint: raw(t("devise.hints.current_password", :link => link_to(t("devise.links.here"), "#recover-password", class: "js-change-tab"))), input_html: {required: true, class: 'input-m'} %>
+        </div>
+        <%= f.actions class: 'enter' do %>
+            <%= f.action :submit, label: t("devise.buttons.edit"), button_html: {class: "button"} %>
+        <% end %>
+    <% end %><%# if action == "edit" %>
+  </fieldset>
+<% end %>

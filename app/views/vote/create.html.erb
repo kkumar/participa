@@ -1,0 +1,23 @@
+<% content_for :title, "Votación de #{ @election.full_title_for current_user }" %>
+
+<script>
+    function getCastHmac(auth_data, callback) {
+		// auth_data is of type:
+		// {
+		//   permission: "vote",
+		//   object_type: "election",
+		//   object_id: 110
+		// }
+		$.ajax("<%= create_token_vote_path %>")
+			.done(function(data) {callback("khmac:///sha-256;"+data);})
+			.fail(function(jqXHR) {window.location.href=jqXHR.responseText});
+    }
+</script>
+
+<div class="booth_container">
+<a class="agoravoting-voting-booth" href="<%= @election.server_url %>#/election/<%= @scoped_agora_election_id %>/vote?seed=<%=current_user.id%>" data-authorization-funcname="getCastHmac">Votar con Agora Voting</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="<%= @election.server_url %>avWidgets.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","agoravoting-widgets-js");</script>
+</div>
+<% if @election.info_url and not @election.info_url.empty? and not @election.info_text.empty? %>
+<a class="view_candidates" href="<%= @election.info_url %>" target="_blank"><%= @election.info_text %></a>
+<% end %>

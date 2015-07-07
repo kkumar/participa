@@ -1,0 +1,68 @@
+<%= content_for :title, t("podemos.user.personal_data") %>
+<div class="content">
+  <div class="content-content cols">
+    <div class="row">
+      <div class="col-b-4a12">
+
+        <nav id="personal-data-submenu" class="submenu">
+          <ul>
+            <li class="active">
+              <a href="#personal-data" class="js-change-tab">
+                <span><%= t("podemos.user.personal_data")%></span>
+              </a>
+            </li>
+            <li>
+              <a href="#change-password" class="js-change-tab">
+                <span><%=t("podemos.user.change_password") %></span>
+              </a>
+            </li>
+            <li>
+              <a href="#recover-password" class="js-change-tab">
+                <span><%=t("podemos.user.recover_password") %></span>
+              </a>
+            </li>
+            <li>
+              <a href="#change-email" class="js-change-tab">
+                <span><%=t("podemos.user.change_email") %></span>
+              </a>
+            </li> 
+            <li>
+              <a href="<%= current_user.is_valid_phone? ? "#change-phone" : sms_validator_step1_path %>" <% if current_user.is_valid_phone? %>class="js-change-tab"<% end %> >
+                <span><%=t("podemos.user.change_phone") %></span>
+              </a>
+            </li>
+            <li>
+              <a href="#cancel-account" class="js-change-tab">
+                <span><%= t("podemos.user.cancel_account") %></span>
+              </a>
+            </li>
+          </ul>
+        </nav><%#!--.submenu--%>
+
+        <div id="personal-data-content">
+          <div class="js-personal-content" id="personal-data">
+            <%= errors_in_form resource %>
+            <%= render partial: 'personal_data' %>
+          </div>
+          <div id="change-password" class="invisible js-personal-content">
+            <%= render partial: 'change_password' %>
+          </div>
+          <div id="recover-password" class="invisible js-personal-content">
+            <%= render partial: 'recover_password' %>
+          </div>
+          <div id="change-email" class="invisible js-personal-content">
+            <%= render partial: 'change_email' %>
+          </div>
+          <% if current_user.is_valid_phone? %>
+          <div id="change-phone" class="invisible js-personal-content">
+            <%= render partial: 'change_phone' %>
+          </div>
+          <% end %>
+          <div id="cancel-account" class="invisible js-personal-content">
+            <%= render partial: 'cancel_account' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<% if [:error, :notice, :recaptcha_error, :alert].any? { |err| flash[err].present? } %>
+  <div class="col-b-4a12">
+    <% if flash[:error].present? %>
+        <%= error_box "Error" do %>
+            <%= flash[:error].html_safe %>
+        <% end %>
+    <% end %>
+    <% if flash[:notice].present? %>
+        <%= alert_box "Información" do %>
+            <%= flash[:notice].html_safe %>
+        <% end %>
+    <% end %>
+    <% if flash[:recaptcha_error].present? %>
+        <%= error_box "Error" do %>
+            <%= flash[:recaptcha_error].html_safe %>
+        <% end %>
+    <% end %>
+
+    <% if flash[:alert].present? %>
+        <%= error_box "Atención" do %>
+            <%= flash[:alert].html_safe %>
+        <% end %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,124 @@
+<div class="header">
+
+  <div class="header-content">
+
+    <div class="col-h-1a3">
+      <figure class="logo">
+        <a href="/">
+          <h1>
+            <%= image_tag "logo.zec-220-w.png", alt: "Zaragoza en Común" %>
+          </h1>
+        </a>
+      </figure>
+    </div><!--col-h-1-->
+
+    <div id="block-locale-language" class="block block-locale">
+
+      <div class="col-h-12a3">
+
+        <% if user_signed_in? %>
+          <div class="profile-name">
+            <b>
+              <%= current_user.full_name %>
+            </b>
+            <%= link_to "(Salir)", destroy_user_session_path, method: :delete, title: "Cerrar sesión" %>
+            <% if current_user.is_verified? %>
+              <div class="verified"><%= t('verification.user_verified') %></div>
+            <% else %>
+              <div class="unverified"><%= t('verification.user_unverified') %></div>
+            <% end %>
+          </div>
+        <% end %>
+
+        <ul class="language-switcher-locale-url"> 
+          <li class="lang-castellano">
+          <%= link_to "Cast", url_for(locale: :es), class: current_lang_class(:es) %>
+          </li>
+        </ul>
+
+      </div><%#.col-h-2a4%>
+     </div>
+
+
+    <% if user_signed_in? %>
+
+    <div class="col-h-1a12">
+
+      <nav class="menu" id="top_menu">
+        <%= link_to t('voting.continue'), 'https://participa.zaragozaencomun.com', class:"js-return-vote menu-return-vote", style:"display: none;" %>        <ul>
+          <li class="menu-hamb">
+            <a id="hamburger_menu" href="#">
+              <span>Menú</span>
+            </a>
+          </li>
+          <li class="menu-logout">
+            <%= nav_menu_link_to "Salir", "sign-out", destroy_user_session_path, [destroy_user_session_path], method: :delete, title: "Cerrar sesión" %>
+          </li>
+          <% if Rails.application.secrets.features["participation_teams"] %>
+            <li class="menu-people">
+              <%= nav_menu_link_to "Equipos de Participación", "users", participation_teams_path, [participation_teams_path], title: "Equipos de Participación" %>
+            </li>
+          <% end %>
+          <% if Rails.application.secrets.features["proposals"] %>
+            <li class="menu-thumbup">
+              <%= nav_menu_link_to "Iniciativas ciudadanas", "lightbulb-o", proposals_path, [proposals_path], title: "Iniciativas ciudadanas " %>
+            </li>
+          <% end %>
+          <% if can? :step1, :verification %>
+            <% if Rails.application.secrets.features["verification_presencial"] %>
+              <li class="menu-verif">
+                <%= nav_menu_link_to "Verificación", "verifications", verification_step1_path, [verification_step1_path], title: "Verificación" %>
+              </li>
+            <% end %>
+          <% end %>
+          <!-- li class="menu-notif">
+            <%# nav_menu_link_to "Avisos", notices_path, [notices_path], class: new_notifications_class %>
+          </li -->
+          <li class="menu-calendar">
+            <%= nav_menu_link_to "Calendario", "calendar", calendar_path, [calendar_path], title: "Calendario"  %>
+          </li>
+          <li class="menu-map">
+            <%= nav_menu_link_to "Mapa", "map", map_path, [map_path], title: "Mapa"  %>
+          </li>
+          <li class="menu-social">
+            <%= nav_menu_link_to "Social", "social", social_path, [social_path], title: "Social"  %>
+          </li>
+          <% if Rails.application.secrets.features["collaborations"] %>
+              <li class="menu-econ">
+                <%= nav_menu_link_to "Colaboración económica", "euro", new_collaboration_path, [new_collaboration_path], title: "Colaboración económica"  %>
+              </li>
+          <% end %>
+          <% if Rails.application.secrets.features["microcredits"] %>
+              <li class="menu-credit">
+                <%= nav_menu_link_to "Microcréditos", "credit", microcredit_path, [microcredit_path], title: "Microcréditos"  %>
+              </li>
+          <% end %>
+          <% if Rails.application.secrets.features["blog"] %>
+              <li class="menu-world">
+                <%= nav_menu_link_to "Blog", "compass", blog_path, [blog_path], title: "Blog" %>
+              </li>
+          <% end %>
+          <li class="menu-profile">
+            <%= nav_menu_link_to "Datos personales", "user", edit_user_registration_path, [edit_user_registration_path], title: "Datos personales" %>
+          </li>
+          <li class="menu-tools">
+            <%= nav_menu_link_to "Inicio", "home", root_path, [root_path], title: "Inicio" %>
+          </li>
+          <li class="menu-name">
+            <% link_to edit_admin_user_path(current_user) do %>
+              <span class="name">
+                <%= current_user.try(:first_name) %>
+              </span>
+              <span class="surname">
+                <%= current_user.try(:last_name) %>
+              </span>
+            <% end %>
+          </li>
+        </ul>
+      </nav><%#.menu%>
+    </div><%#.col-h-2a4%>
+    <%= render partial: 'sidr_menu' %>
+    <% end %>
+
+  </div><!--.header-content-->
+</div><!--#header-->

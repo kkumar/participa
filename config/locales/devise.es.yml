@@ -1,0 +1,68 @@
+# https://gist.github.com/Theby/8278002
+# Traducciones adicionales en https://github.com/plataformatec/devise/wiki/I18n
+
+es:
+  devise:
+    confirmations:
+      confirmed: "Tu dirección de correo electrónico ya ha sido confirmada."
+      confirmed_and_signed_in: "Tu dirección de correo electrónico ya ha sido confirmada. Has sido identificado."
+      send_instructions: "Recibirás un correo electrónico en unos minutos con instrucciones sobre cómo restablecer tu contraseña."
+      send_paranoid_instructions: "Hemos enviado a %{email} los pasos para recuperar tu contraseña. Si no recibes nuestro correo en unos minutos, es posible que usaras una cuenta de email diferente cuando te inscribiste en Podemos: prueba con otras cuentas que tengas, y si no lo consigues con ninguna, envía un correo a soportevotaciones@podemos.info para recibir ayuda."
+    failure:
+      already_authenticated: "Ya estás identificado."
+      inactive: "Tu cuenta aún no ha sido activada."
+      invalid: "Correo electrónico, número de documento o contraseña inválidos. Recuerde que puede iniciar sesión tanto con su DNI como son su correo electrónico."
+      invalid_token: "Cadena de autenticación invalida."
+      locked: "Tu cuenta está bloqueada."
+      not_found_in_database: "Correo electrónico, número de documento o contraseña inválidos. Recuerde que puede iniciar sesión tanto con su DNI como son su correo electrónico."
+      timeout: "Tu sesión ha expirado, por favor identifícate de nuevo para continuar."
+      unauthenticated: "Necesitas iniciar sesión o registrarte para continuar."
+      unauthenticated_html: "Necesitas <a href='/'>iniciar sesión</a> o <a href='/users/sign_up'>registrarte</a> para continuar."
+      unconfirmed: "Debes confirmar tu cuenta para continuar."
+      last_attempt: "Tienes un intento más antes que tu cuenta quede bloqueada."
+    mailer:
+      confirmation_instructions:
+        subject: "[participa.podemos.info] Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "[participa.podemos.info] Instrucciones para restablecer tu contraseña"
+      unlock_instructions:
+        subject: "[participa.podemos.info] Instrucciones de desbloqueo"
+    omniauth_callbacks:
+      failure: "No se te pudo autorizar de %{kind} debido a \"%{reason}\"."
+      success: "Identificado correctamente de %{kind}."
+    passwords:
+      no_token: "No puedes acceder a esta página sino es por medio de un enlace para restablecer contraseña. Si accediste desde el enlace para restablecer la contraseña, asegúrate de que la URL está completa."
+      send_instructions: "Recibirás un correo electrónico con instrucciones sobre cómo restablecer tu contraseña en unos minutos."
+      send_paranoid_instructions: "Hemos enviado a %{email} los pasos para recuperar tu contraseña. Si no recibes nuestro correo en unos minutos, es posible que usaras una cuenta de email diferente cuando te inscribiste en Podemos: prueba con otras cuentas que tengas, y si no lo consigues con ninguna, envía un correo a soportevotaciones@podemos.info para recibir ayuda."
+      updated: "Tu contraseña se cambió correctamente. Has sido identificado."
+      updated_not_active: "Tu contraseña se cambió correctamente."
+    registrations:
+      destroyed: "¡Adiós! Tu cuenta ha sido cancelada. Esperamos volver a verte pronto."
+      signed_up: "¡Bienvenido! Has sido identificado."
+      signed_up_but_inactive: "Te has inscrito correctamente, pero no has podido iniciar sesión porque no has activado tu cuenta."
+      signed_up_but_locked: "Te has inscrito correctamente, pero no has podido iniciar sesión porque tu cuenta está bloqueada."
+      signed_up_but_unconfirmed: "Se te ha enviado un mensaje con un enlace de confirmación. Por favor visita el enlace en las próximas horas para activar tu cuenta."
+      update_needs_confirmation: "Actualizaste tu cuenta correctamente, sin embargo necesitamos verificar tu nueva cuenta de correo. Por favor revisa tu correo electrónico y visita el enlace para finalizar la confirmación de tu nueva dirección de correo electrónico."
+      updated: "Has actualizado tu cuenta correctamente."
+    sessions:
+      signed_in: ""
+      signed_out: ""
+    unlocks:
+      send_instructions: "Recibirás un correo electrónico en unos minutos con instrucciones sobre cómo desbloquear tu cuenta."
+      send_paranoid_instructions: "Hemos enviado al correo que has indicado los pasos para desbloquear tu cuenta. Si no recibes nuestro correo en unos minutos, es posible que usaras una cuenta de email diferente cuando te inscribiste en Podemos: prueba con otras cuentas que tengas, y si no lo consigues con ninguna, envía un correo a soportevotaciones@podemos.info para recibir ayuda."
+      unlocked: "Tu cuenta ha sido desbloqueada. Por favor inicia sesión para continuar."
+    labels:
+      new_password: "Contraseña nueva"
+      new_password_confirmation: "Contraseña nueva (repetir)"
+  errors:
+    messages:
+      confirmation: "El valor no coincide con la confirmación."
+      invalid: "El valor no es correcto."
+      already_confirmed: "ya ha sido confirmado, por favor intenta iniciar sesión."
+      confirmation_period_expired: "necesita ser confirmado en %{period}, por favor vuelve a solicitarla."
+      expired: "ha expirado, por favor vuelve a solicitarla."
+      not_found: "no se encontró."
+      not_locked: "no estaba bloqueado."
+      not_saved:
+        one: "1 error impidió que este %{resource} fuese guardado:"
+        other: "%{count} errores impidieron que este %{resource} fuese guardado:"

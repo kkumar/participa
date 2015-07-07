@@ -1,0 +1,44 @@
+# adicionales a devise
+
+es:
+  devise:
+    registrations: 
+      ok: "Te has inscrito correctamente. Recibirás un correo que tendrás que confirmar para continuar con el proceso. Revisa tu correo."
+    buttons:
+      sign_in: "Iniciar sesión"
+      sign_up: "Inscribirse"
+      edit: "Actualizar datos" 
+      cancel_account: "Darme de baja"
+      reset_password: "Enviarme las instrucciones por correo electrónico"
+      change_password: "Cambiar contraseña"
+      confirmation_instructions: "Reenviar instrucciones de confirmación"
+      unlock_instructions: "Reenviar instrucciones de desbloqueo"
+    hints:
+      locked: "No puedes modificar este campo"
+      password: ""
+      current_password: "Por seguridad, debes introducir tu contraseña actual para hacer cambios. Haz click %{link} si no la recuerdas. "
+      labels:
+      new_password: "Contraseña nueva"
+      new_password_confirmation: "Confirmar contraseña nueva"
+    links:
+      sign_in: "Iniciar sesión"
+      sign_in_with: "Iniciar sesión con %{provider}"
+      sign_up: "Inscribirse"
+      sign_out: "Cerrar sesión"
+      my_account: "Mi cuenta"
+      back: "Volver"
+      forgot_password: "He olvidado mi contraseña"
+      confirmation_instructions: "¿No has recibido las instrucciones de confirmación?"
+      unlock_instructions: "¿No has recibido las instrucciones de desbloqueo?"
+      here: "aquí"
+    messages:
+      cancel_account_confirmation: "¿Estás seguro?"
+      waiting_confirmation: "Actualmente esperando instrucciones para %{email}"
+    titles:
+      sign_in: "Iniciar sesión"
+      sign_up: "Formulario de inscripción en Podemos partido político CIF G86976941"
+      cancel_account: "Cancelar mi cuenta"
+      forgot_password: "¿Has olvidado tu contraseña?"
+      change_password: "Cambiar tu contraseña"
+      confirmation_instructions: "Reenviar instrucciones de confirmación"
+      unlock_instructions: "Reenviar instrucciones de desbloqueo"

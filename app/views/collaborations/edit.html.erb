@@ -1,0 +1,33 @@
+<% content_for :title, t("podemos.collaboration.title") %>
+
+<div class="content-content cols">
+  <div class="row">
+    <div class="col-b-4a12">
+
+      <%= content_tag(:h2, t("podemos.collaboration.title")) %>
+
+      <%= info_box do %>
+          <p><%= t("podemos.collaboration.p1") %></p>
+      <% end %>
+
+      <p> Ya tienes una colaboración. Es la siguiente: </p>
+      <%= errors_in_form @collaboration %>
+
+      <%= semantic_form_for @collaboration, url: modify_collaboration_path, html: {method: :post, autocomplete: 'off'} do |f| %>
+
+      <%= render partial: "form", locals: { f: f } %>
+      <%= render partial: "frequency_table" %>
+      <% if @collaboration.has_payment? %>
+          <%= error_box "Cambios en la colaboración", false do %>
+            <p>Si deseas cambiar el método de pago de tu colaboración debes cancelar tu colaboración actual y crear una nueva. </p>
+          <% end %>
+      <% end %>
+
+      <div class="js-collaboration-confirm-buttons buttonbox">
+        <%= link_to "Dar de baja colaboración", destroy_collaboration_path, class: 'button button-danger', method: :delete, data: {confirm: "¿Estás seguro que quieres dar de baja esta colaboración?"} %>
+        <%= f.action :submit, :label=>"Guardar cambios", :as => :input, button_html: {class: 'button'} %>
+      </div>
+      <% end %> 
+    </div>
+  </div>
+</div>

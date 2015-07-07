@@ -1,0 +1,45 @@
+
+document_change = (document_type) ->
+  $('.js-registration-document-wrapper').removeClass('invisible')
+  $('.js-registration-document-wrapper label').html("#{document_type} <abbr title='required'>*</abbr>")
+
+  switch document_type
+    when "1" then has_dni()
+    when "2" then has_nie()
+    when "3" then has_passport()
+    else has_dni()
+
+has_dni = () ->
+  $('.js-registration-document-passport').addClass('invisible')
+  $('.js-registration-document-nie').addClass('invisible')
+  $('.js-registration-document-dni').removeClass('invisible')
+
+has_nie = () ->
+  $('.js-registration-document-passport').addClass('invisible')
+  $('.js-registration-document-dni').addClass('invisible')
+  $('.js-registration-document-nie').removeClass('invisible')
+
+has_passport = () ->
+  $('.js-registration-document-dni').addClass('invisible')
+  $('.js-registration-document-nie').addClass('invisible')
+  $('.js-registration-document-passport').removeClass('invisible')
+
+init_registrations = () ->
+
+  #if ( $('.js-registration-document:checked').length > 0 )
+  #  document_type = $('.js-registration-document:checked').find('option:selected').text()
+  #  document_change(document_type)
+
+  document_type = $('.js-registration-document').find('option:selected').val()
+  document_change(document_type)
+
+  $('.js-registration-document').change (event) ->
+    document_type = $('.js-registration-document').find('option:selected').val()
+    document_change(document_type)
+
+$(window).bind 'page:change', ->
+  init_registrations()
+
+$ ->
+  init_registrations()
+
