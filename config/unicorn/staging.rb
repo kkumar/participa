@@ -1,4 +1,4 @@
-directory = "/srv/rails/betaparticipa2.barcelonaencomu.cat"
+directory = "/var/www/beta.participa.zaragozaencomun.com"
 
 working_directory "#{directory}/current"
 pid "#{directory}/current/tmp/pids/unicorn.pid"

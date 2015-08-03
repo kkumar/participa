@@ -1,5 +1,5 @@
-deploy_stag_server = 'participa.barcelonaencomu.cat'
-deploy_stag_to = '/srv/rails/betaparticipa2.barcelonaencomu.cat'
+deploy_stag_server = 'beta.participa.zaragozaencomun.com'
+deploy_stag_to = '/var/www/beta.participa.zaragozaencomun.com'
 
 role [ :app, :db, :web ], [ deploy_stag_server ]
 
