@@ -1,9 +1,10 @@
-directory = "/srv/rails/participa.barcelonaencomu.cat"
+directory = "/var/www/participa.zaragozaencomun.com"
+socket = "/tmp/unicorn.participa.zaragozaencomun.com.sock"
 
 working_directory "#{directory}/current"
 pid "#{directory}/current/tmp/pids/unicorn.pid"
 stderr_path "#{directory}/shared/log/unicorn.log"
 stdout_path "#{directory}/shared/log/unicorn.log"
-listen "/tmp/unicorn.participa.barcelonaencomu.cat.sock"
+listen socket
 worker_processes 4
 timeout 120

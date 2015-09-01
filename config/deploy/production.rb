@@ -1,5 +1,5 @@
-deploy_prod_server = 'participa.barcelonaencomu.cat'
-deploy_prod_to = '/srv/rails/participa.barcelonaencomu.cat'
+deploy_prod_server = 'participa.zaragozaencomun.com'
+deploy_prod_to = '/var/www/participa.zaragozaencomun.com'
 
 role [ :app, :db, :web ], [ deploy_prod_server ]
 
