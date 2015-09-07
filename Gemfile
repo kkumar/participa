@@ -88,7 +88,7 @@ group :development, :test do
 end
 
 # FIXME: vendor/overrides/(org)/Gemfile
-#gem 'aws-ses', '~> 0.5.0', :require => 'aws/ses'
+gem 'aws-ses', '~> 0.5.0', :require => 'aws/ses'
 gem 'mailjet'
 
 source 'https://rails-assets.org' do
