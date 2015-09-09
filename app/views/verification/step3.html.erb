@@ -19,6 +19,9 @@
         <li>
           <b><%= t('verification.born_at') %></b>: <%= @user.born_at %>
         </li>
+        <li>
+          <b><%= t('verification.district') %></b>: <%= @user.district_name %>
+        </li>
       </ul>
 
       <%= button_to t('verification.confirm'), verification_confirm_path(id: @user.id), class: "button-primary verif-left", method: :post, data: { confirm: t('verification.sure') } %>
