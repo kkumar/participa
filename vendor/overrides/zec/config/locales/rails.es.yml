@@ -36,18 +36,18 @@ es:
       short: ! '%d de %b'
     month_names:
     -
-    - gener
-    - febrer
-    - març
+    - enero
+    - febrero
+    - marzo
     - abril
-    - maig
-    - juny
-    - juliol
-    - agost
-    - setembre
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
     - octubre
-    - novembre
-    - desembre
+    - noviembre
+    - diciembre
     order:
     - :day
     - :month
