@@ -258,7 +258,7 @@ Al marcar la casilla “He leído y acepto las condiciones generales" el USUARIO
 '
     registration:
       legends:
-        inscription_html: "Inscribirse en Zaragoza en Común te da derecho a participar en todas las consultas y procesos participativos que se lancen en esta aplicación. No supone ninguna obligación económica, aunque puedes colaborar en este sentido si lo deseas. Aceptando, recibirás nuestros newsletters informativos. También puedes participar más, aquí puedes ver cómo hacerlo. <a href='https://zaragozaencomun.com/es/participa' target='_blank' >https://zaragozaencomun.com/es/participa </a> <br><br> Asociación Ganemos Zaragoza (Zaragoza en Común) con personalidad jurídica propia, CIF G99422891. Apartado de correos, 35 (CP 50080 ZARAGOZA). "
+        inscription_html: "Inscribirse en Zaragoza en Común te da derecho a participar en todas las consultas y procesos participativos que se lancen en esta aplicación. No supone ninguna obligación económica, aunque puedes colaborar en este sentido si lo deseas. Aceptando, recibirás nuestros newsletters informativos. También puedes participar más, aquí puedes ver cómo hacerlo. <a href='http://zaragozaencomun.com/es/participa' target='_blank' >http://zaragozaencomun.com/es/participa </a> <br><br> Asociación Ganemos Zaragoza (Zaragoza en Común) con personalidad jurídica propia, CIF G99422891. Apartado de correos, 35 (CP 50080 ZARAGOZA). "
         legal1: Véase la política de privacidad
         legal2: Véase el aviso legal
         legal3: Véase la política de Cookies
@@ -687,9 +687,9 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
   domicilio: "Domicilio"
   consentimiento: "Consentimiento"
   accepto1_html: 'Acepto la Política de Privacidad, Aviso Legal y Política de Cookies<br />
-  <a target="_blank" href="https://zaragozaencomun.com/es/politica-de-privacidad">Véase la política de privacidad</a><br>
-<a target="_blank" href="https://zaragozaencomun.com/es/aviso-legal">Véase el aviso legal</a><br>
-<a target="_blank" href="https://zaragozaencomun.com/es/politica-de-cookies">Véase la política de Cookies</a></p>'
+  <a target="_blank" href="http://zaragozaencomun.com/es/politica-de-privacidad">Véase la política de privacidad</a><br>
+<a target="_blank" href="http://zaragozaencomun.com/es/aviso-legal">Véase el aviso legal</a><br>
+<a target="_blank" href="http://zaragozaencomun.com/es/politica-de-cookies">Véase la política de Cookies</a></p>'
   welcome_html: "<p><strong>Bienvenido/a al portal de participación de Zaragoza en Común</strong></p>
     <p>
     Somos una plataforma ciudadana con un proyecto colectivo para transformar Zaragoza. Una comunidad amplia y diversa que está trabajando para convertir Zaragoza en referente de democracia, participación, transparencia, derechos sociales, defensa del bien común y de la lucha contra la desigualdad y la corrupción.
