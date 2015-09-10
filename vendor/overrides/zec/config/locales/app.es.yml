@@ -174,7 +174,7 @@ De conformidad con lo dispuesto en el artículo 16.3 de la Ley Orgánica de Prot
           p2: "Esta dirección de correo no permite respuesta. Si tienes cualquier problema con el registro, por favor, contacta con barrios@ganemoszaragoza.com"
         password:
           p1: "Alguien ha pedido que cambies tu contraseña. Puedes hacerlo a través del siguiente enlace:"
-          p2: "Esta dirección de correo no permite respuesta. Si tienes cualquier problema con el registro, por favor, contacta con barrios@ganemoszaragoza.com"
+          p2: "Esta dirección de correo no permite respuesta. Si tienes cualquier problema con el registro, por favor, contacta con  barrios@ganemoszaragoza.com"
           p3: "Si no has sido tú, por favor ignora este correo. Tu contraseña no cambiará hasta que accedas a este enlace y crees una nueva."
           link: 'Cambiar contraseña'
     navbar:
