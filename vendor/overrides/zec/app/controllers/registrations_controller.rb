@@ -19,7 +19,7 @@ class RegistrationsController
     if current_user.can_change_vote_location?
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :current_password, :born_at, :wants_newsletter, :address, :postal_code, :district, :vote_province, :vote_town)
     else
-      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :current_password, :born_at, :wants_newsletter, :address, :postal_code, :district)
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :current_password, :born_at, :wants_newsletter)
     end
   end
 
