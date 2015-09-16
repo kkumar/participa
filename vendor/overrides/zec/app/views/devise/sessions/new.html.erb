@@ -58,7 +58,7 @@
           <% end %>
 
           <p class="total">
-            <%= t('welcome_count_html', count_all_users: User.created.all.count, count_verif_users: User.verified.all.count )%>
+            <%= t('welcome_count_html', count_all_users: User.created.all.count, count_verif_users: User.verified_presencial.all.count )%>
           </p>
         </article><!--.intro-->
 
