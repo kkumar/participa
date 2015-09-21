@@ -23,6 +23,7 @@
     <%= render partial: 'municipies_select', locals:{country: "ES", province: user_location[:vote_province], town: user_location[:vote_town], required: false, field: :vote_town, title:"Municipio de participación"}%>
 
     <%= f.input :postal_code %>
+    <%= f.input :district %>
     <%= f.input :circle %>
     <%= f.input :wants_newsletter %>
   <% end %>

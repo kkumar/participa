@@ -29,7 +29,7 @@ ActiveAdmin.register User do
     scope :verified
   end
 
-  permit_params :email, :password, :password_confirmation, :first_name, :last_name, :document_type, :document_vatid, :born_at, :address, :town, :postal_code, :province, :country, :vote_province, :vote_town, :wants_newsletter
+  permit_params :email, :district, :password, :password_confirmation, :first_name, :last_name, :document_type, :document_vatid, :born_at, :address, :town, :postal_code, :province, :country, :vote_province, :vote_town, :wants_newsletter
 
   index do
     selectable_column
@@ -38,6 +38,7 @@ ActiveAdmin.register User do
     column :email
     column :created_at
     column :verified_at
+    column :district
     #column :verificated_users_count
     column :verified_by
     column :validations do |user|
@@ -115,6 +116,7 @@ ActiveAdmin.register User do
       row :vote_town_name
       row :address
       row :postal_code
+      row :district
       
       row :country do
         user.country_name
@@ -228,6 +230,7 @@ ActiveAdmin.register User do
   filter :verified_at
   filter :sms_confirmed_at
   filter :sign_in_count
+  filter :district
   filter :votes_election_id, as: :select, collection: Election.all
   if defined? User.verifications_admin 
     filter :verified_by_id, as: :select, collection: User.verifications_admin.all
@@ -244,6 +247,7 @@ ActiveAdmin.register User do
     column :province_name
     column :town_name
     column :address
+    column :district
     column :postal_code
     column :country
     column :province
