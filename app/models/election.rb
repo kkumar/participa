@@ -85,7 +85,7 @@ class Election < ActiveRecord::Base
       when 4
         user.vote_island_numeric
       else
-        "00"
+        "" #00
     end
     election_location = self.election_locations.find_by_location user_location
     "#{self.agora_election_id}#{election_location.override or election_location.location}#{election_location.agora_version}".to_i
