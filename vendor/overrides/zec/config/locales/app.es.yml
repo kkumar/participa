@@ -128,7 +128,7 @@ es:
         remember_me: "Recordarme"
         wants_newsletter: 'Newsletter'
         terms_of_service: "He leído y acepto la Política de Privacidad, Aviso Legal y Política de Cookies"
-        inscription: "Acepto incribirme en la candidatura"
+        inscription: "Acepto colaborar en la candidatura"
         over_18: "Declaro ser mayor de 16 años"
         captcha: "Escribe el siguiente texto o número"
         current_password: "Contraseña actual"
@@ -258,7 +258,7 @@ Al marcar la casilla “He leído y acepto las condiciones generales" el USUARIO
 '
     registration:
       legends:
-        inscription_html: "Inscribirse en Zaragoza en Común te da derecho a participar en todas las consultas y procesos participativos que se lancen en esta aplicación. No supone ninguna obligación económica, aunque puedes colaborar en este sentido si lo deseas. Aceptando, recibirás nuestros newsletters informativos. También puedes participar más, aquí puedes ver cómo hacerlo. <a href='http://zaragozaencomun.com/es/participa' target='_blank' >http://zaragozaencomun.com/es/participa </a> <br><br> Asociación Ganemos Zaragoza (Zaragoza en Común) con personalidad jurídica propia, CIF G99422891. Apartado de correos, 35 (CP 50080 ZARAGOZA). "
+        inscription_html: "Colaborar en Zaragoza en Común te da derecho a participar en todas las consultas y procesos participativos que se lancen en esta aplicación. No supone ninguna obligación económica, aunque puedes colaborar en este sentido si lo deseas. Aceptando, recibirás nuestros newsletters informativos. También puedes participar más, aquí puedes ver cómo hacerlo. <a href='http://zaragozaencomun.com/es/participa' target='_blank' >http://zaragozaencomun.com/es/participa </a> <br><br> Grupo Municipal Zaragoza en Común, con personalidad jurídica propia, CIF V99445470. Plaza del Pilar, Nº8 CP:50003 ZARAGOZA. "
         legal1: Véase la política de privacidad
         legal2: Véase el aviso legal
         legal3: Véase la política de Cookies
