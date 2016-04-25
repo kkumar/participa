@@ -1,4 +1,4 @@
-deploy_stag_server = 'beta.participa.zaragozaencomun.com'
+deploy_stag_server = 'beta.participa.zaragozaencomun.es'
 deploy_stag_to = '/var/www/beta.participa.zaragozaencomun.com'
 
 role [ :app, :db, :web ], [ deploy_stag_server ]
