@@ -1,4 +1,4 @@
-deploy_prod_server = 'participa.zaragozaencomun.com'
+deploy_prod_server = 'participa.zaragozaencomun.es'
 deploy_prod_to = '/var/www/participa.zaragozaencomun.com'
 
 role [ :app, :db, :web ], [ deploy_prod_server ]
