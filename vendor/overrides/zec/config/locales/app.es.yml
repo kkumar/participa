@@ -282,17 +282,17 @@ Al marcar la casilla “He leído y acepto las condiciones generales" el USUARIO
         explain: "Por motivos de seguridad tienes que cambiar la contraseña."
         changed: "Has cambiado tu contraseña"
     legal:
-      title1: "WEB participa.zaragozaencomun.com"
+      title1: "WEB participa.zaragozaencomun.es"
       title2: "Aviso legal"
       title3: "CONDICIONES GENERALES DE ACCESO, EMPLEO DE COOKIES Y POLÍTICA DE PRIVACIDAD"
       p1:
         title: "Información general"
         p1:
           subtitle: "Identificación del propietario de la web"
-          text_html: "Zaragoza en Común PARTIDO POLÍTICO (en adelante Zaragoza en Común) <br> CIF G99422891 <br> Calle Castillejos, 233 <br> 08013 Zaragoza"
+          text_html: "Grupo Municipal Zaragoza en Común (en adelante Zaragoza en Común) <br> CIF V99445470 <br> Plaza del Pilar, 3 <br> 50003 Zaragoza"
         p2:
           subtitle: "Contacto"
-          text_html: "Información general: incidencias@zaragozaencomun.com <br> Incidencias inscripciones: incidencias@zaragozaencomun.com <br> Protección de datos: incidencias@zaragozaencomun.com <br>"
+          text_html: "Información general: incidencias@zaragozaencomun.es <br> Incidencias inscripciones: incidencias@zaragozaencomun.es <br> Protección de datos: incidencias@zaragozaencomun.es <br>"
       p2:
         title: "Condiciones generales de acceso y uso de la web "
         p1:
@@ -476,7 +476,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           text_html: '
 <p> Al marcar la casilla “He leído y acepto las condiciones de uso, empleo de cookies y política de privacidad" el USUARIO/A declara haber leído este aviso legal y estar conforme con su contenido.
 </p>
-<p> <b> Zaragoza en Común Asociación Ganemos Zaragoza<br> CIF G99422891<br> Versión 25 de Febrero de 2015 12:00<br> </b> </p>
+<p> <b> Zaragoza en Común <br> CIF V99445470 <br> Versión 25 de Abril de 2016 12:00<br> </b> </p>
 '
   issues:
     confirm_sms: "Por seguridad, debes confirmar tu teléfono."
@@ -522,7 +522,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
       voting: "VOTACIÓN"
       inscription_errors: 'ERRORES INSCRIPCIÓN'
       verification: "VERIFICACIÓN"
-      faq1_html: ' <a class="cd-faq-trigger" href="#0">1. ¿Qué necesitas para entrar en participa.zaragozaencomun.com?</a>
+      faq1_html: ' <a class="cd-faq-trigger" href="#0">1. ¿Qué necesitas para entrar en participa.zaragozaencomun.es?</a>
             <div class="cd-faq-content">
     <p> Es necesario residir en Zaragoza ciudad.
     </p>
@@ -533,7 +533,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           <li>
           <a class="cd-faq-trigger" href="#0">2. ¿Qué hago si no recuerdo mi contraseña?</a>
           <div class="cd-faq-content">
-            <p>Puedes solicitar uno nuevo <a href="https://participa.zaragozaencomun.com/es/users/password/new" target="_blank" title="¿Has olvidado tu contraseña?">aquí</a>.</p>
+            <p>Puedes solicitar uno nuevo <a href="https://participa.zaragozaencomun.es/es/users/password/new" target="_blank" title="¿Has olvidado tu contraseña?">aquí</a>.</p>
           </div> <!-- cd-faq-content -->
        '
       faq2_html: ' <a class="cd-faq-trigger" href="#0">3. No me acuerdo del correo electrónico ¿Qué hago?</a>
@@ -557,7 +557,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
       faq3_html: "<a class='cd-faq-trigger' href='#0'>6. Correo electrónico, número de documento o contraseña inválida.</a>
           <div class='cd-faq-content'>
             <p> Si no recuerdas el correo electrónico que utilizaste para inscribirte, prueba con el DNI. </p>
-             <p> Si no recuerdas la contraseña, haz clic <a href='https://participa.zaragozaencomun.com/es/users/password/new' target='_blank' title='¿Has olvidado tu contraseña? '> Aquí </a> para sollicitar una nueva. </p>
+             <p> Si no recuerdas la contraseña, haz clic <a href='https://participa.zaragozaencomun.es/es/users/password/new' target='_blank' title='¿Has olvidado tu contraseña? '> Aquí </a> para sollicitar una nueva. </p>
              <p> Si no recibes tu contraseña, mira el error 2, que aparece mas abajo.</p>
           </div> <!-- cd-faq-content -->
           </li>
@@ -565,7 +565,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           <a class='cd-faq-trigger' href='#0'>7. No me llegan correos a ninguna de mis cuentas. Creo que me he equivocado de correo electrónico. </a>
           <div class='cd-faq-content'>
             <p><strong>Causa:</strong><br />Puede que escribieras mal el correo en el proceso de registro o el registro fue incompleto. </p>
-             <p> <strong> Solución:</strong><br />Escribe un correo a <a href='mailto:incidencias@zaragozaencomun.com'>incidencias@zaragozaencomun.com</a>indicando tus datos personales y adjuntando fotocopia de tu DNI o pasaporte y te daremos de baja para que vuelvas a inscribirte.</p>
+             <p> <strong> Solución:</strong><br />Escribe un correo a <a href='mailto:incidencias@zaragozaencomun.es'>incidencias@zaragozaencomun.com</a>indicando tus datos personales y adjuntando fotocopia de tu DNI o pasaporte y te daremos de baja para que vuelvas a inscribirte.</p>
      </div> <!-- cd-faq-content -->
           </li>"
 
@@ -578,7 +578,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
       faq5_html: '<a class="cd-faq-trigger" href="#0">9. ¿Cómo puedo votar?</a>
           <div class="cd-faq-content">
             <p>En tres sencillos pasos:<br/>
-    1ª. Entra en la web <a href="https://participa.zaragozaencomun.com" target="_blank">participa.zaragozaencomun.com</a>, accede al Portal de Participación, e introduce tu DNI/Correo electrónico y tu contraseña. Si no estas inscrito, hazlo aquí <a href="https://participa.zaragozaencomun.com" target="_blank">participa.zaragozaencomun.com</a>, es muy sencillo.<br/>
+    1ª. Entra en la web <a href="https://participa.zaragozaencomun.es" target="_blank">participa.zaragozaencomun.es</a>, accede al Portal de Participación, e introduce tu DNI/Correo electrónico y tu contraseña. Si no estas inscrito, hazlo aquí <a href="https://participa.zaragozaencomun.es" target="_blank">participa.zaragozaencomun.es</a>, es muy sencillo.<br/>
     2ª. Accede a la cabina de votación: Una vez hayas entrado en la aplicación de Zaragoza en Común, verás un botón para votar. Pincha y serás redirigido a la cabina de votación, donde estarán las 3 votaciones que hay abiertas.<br/>
     3ª. Vota: Responde a las preguntas de la votación. Antes de emitir tu voto, podrás confirmar las respuestas que has elegido y tendrás oportunidad de modificarlas. Una vez hayas hecho esto, podrás confirmar y emitir tu voto.</p>
           </div> <!-- cd-faq-content -->
@@ -587,14 +587,14 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           <li>
           <a class="cd-faq-trigger" href="#0">10. ¿Quién puede votar?</a>
           <div class="cd-faq-content">
-            <p>Cualquier persona que haya realizado la inscripción en <a href="https://participa.zaragozaencomun.com" target="_blank">participa.zaragozaencomun.com</a>, y se haya verificado presencialmente aportando los documentos que se solicitan y tener más de 16 años.</p>
+            <p>Cualquier persona que haya realizado la inscripción en <a href="https://participa.zaragozaencomun.es" target="_blank">participa.zaragozaencomun.es</a>, y se haya verificado presencialmente aportando los documentos que se solicitan y tener más de 16 años.</p>
           </div> <!-- cd-faq-content -->
           </li>
           <li>
           <li>
           <a class="cd-faq-trigger" href="#0">11. ¿Qué necesito para votar?</a>
           <div class="cd-faq-content">
-            <p>Necesitas un ordenador o cualquier otro dispositivo (android/iphone) con acceso a Internet para acceder a participa.zaragozaencomun.com y estar inscrito/a en participa.zaragozaencomun.com.</p>
+            <p>Necesitas un ordenador o cualquier otro dispositivo (android/iphone) con acceso a Internet para acceder a participa.zaragozaencomun.es y estar inscrito/a en participa.zaragozaencomun.es.</p>
           </div> <!-- cd-faq-content -->
           </li>
           <li>
@@ -606,7 +606,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           <li>
           <a class="cd-faq-trigger" href="#0">13. No tengo un dispositivo móvil (smartphone/tablet), ¿puedo votar?</a>
           <div class="cd-faq-content">
-            <p>Si, puedes votar también desde un ordenador con acceso a internet en participa.zaragozaencomun.com .</p>
+            <p>Si, puedes votar también desde un ordenador con acceso a internet en participa.zaragozaencomun.es .</p>
           </div> <!-- cd-faq-content --> </li>
           <li>
           <a class="cd-faq-trigger" href="#0">14. ¿Puedo cambiar mi voto durante el periodo de votación?</a>
@@ -682,7 +682,7 @@ Zaragoza en Común cumple con todas las medidas de seguridad para la protección
           <li>
           <a class="cd-faq-trigger" href="#0">25. Tengo más preguntas</a>
           <div class="cd-faq-content">
-            <p>En ese caso, puedes contactar con nosotros e intentaremos resolver tus dudas, preguntas, o comentarios enviando un mail a incidencias@zaragozaencomun.com.</p>
+            <p>En ese caso, puedes contactar con nosotros e intentaremos resolver tus dudas, preguntas, o comentarios enviando un mail a incidencias@zaragozaencomun.es.</p>
           </div> <!-- cd-faq-content -->'
   domicilio: "Domicilio"
   consentimiento: "Consentimiento"
@@ -817,7 +817,7 @@ del colaborador con el Asociación Ganemos Zaragoza Zaragoza en Común ni le con
 simpatizante, ni de derechos frente al partido, ni queda obligado por sus estatutos y demás normas internas.
 
 Para colaborar económicamente con Zaragoza en Común y poder cumplimentar el formulario de alta como colaborador es
-imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.zaragozaencomun.com.
+imprescindible disponer de DNI o NIE y estar inscrito en la web http://participa.zaragozaencomun.es.
 
 Conforme a lo dispuesto en el artículo 8 de la Ley Orgánica 8/2007 de 4 de julio sobre
 Financiación de los Partidos Políticos, su donativo tendrá la consideración de “aportación
@@ -833,7 +833,7 @@ sobre sus actividades.
 
 Para ejercer sus derechos de acceso, rectificación, cancelación y oposición, como
 cancelar su suscripción, modificar los datos de cobro o el importe y frecuencia de su
-aportación, podrá utilizar la web participa.zaragozaencomun.com accediendo a su perfil personal
+aportación, podrá utilizar la web participa.zaragozaencomun.es accediendo a su perfil personal
 mediante su nombre de usuario y contraseña.
 
 También podrá ejercer sus derechos solicitándolo por correo electrónico a la dirección
